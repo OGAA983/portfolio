@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #1e1e1e;
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  background-color: #252526;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+/* --- Sidebar --- */
+#sidebar {
+  width: 250px;
+  background-color: #2d2d30;
+  border-right: 1px solid #3c3c3c;
+  padding: 20px;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+
+#sidebar h2 {
+  color: #ccc;
+  margin-top: 0;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+#sidebar li {
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#sidebar li:hover {
+  background-color: #3a3d41;
+}
+
+/* --- Hidden sidebar --- */
+#sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+#content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* --- Menu Button --- */
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  position: relative;
+}
+
+#menuToggle .bar,
+#menuToggle .dot {
+  background-color: #ddd;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+#menuToggle .bar {
+  width: 24px;
+  height: 3px;
+  margin: 2px 0;
+}
+
+#menuToggle .dot {
+  width: 4px;
+  height: 4px;
+  margin: 2px 0;
+}
+
+/* Hover animation */
+#menuToggle:hover .bar,
+#menuToggle:hover .dot {
+  background-color: #6c63ff;
+}
+
+button {
+  background-color: #0e639c;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #1177bb;
+}
+
+.hidden {
+  display: none;
+}
